@@ -1,0 +1,59 @@
+<app-navigation></app-navigation>
+<section id="home">
+    <img src="assets/Imagenes/fondoHome.jpg">
+    
+    <div class="overlay py-5">
+        <h1 class="text-center py-5">Crear Cuenta</h1>
+    
+        <div class="col-lg-7 col-md-10 col-11 mx-auto pb-5">
+            <form class="formulario">
+                <div class="form-row row">
+                    <!--Nombre-->
+                    <div class="form-group col-md-6">
+                        <input [(ngModel)]='usuario.nombre' type="text" name="nombre" class="form-control" placeholder="Nombre">
+                    </div>
+                    <!--Apellido-->
+                    <div class="form-group col-md-6">
+                        <input [(ngModel)]='usuario.apellido' type="text" name="apellido" class="form-control" placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 2%;"></div>
+                <div class="form-row row">
+
+                     <!--Correo-->
+                     <div class="form-group col-md-6">
+                        <input [(ngModel)]='usuario.email' type="email" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <!--Contraseña-->
+                    <div class="form-group col-md-6">
+                        <input [(ngModel)]='usuario.contrasenia' type="password" name="contrasenia" class="form-control" placeholder="contrasenia">
+                    </div>
+
+                    <!--Edad-->
+                    <div class="form-group col-md-3">
+                        <input [(ngModel)]='usuario.cui' type="number" name="cui" class="form-control" placeholder="Cui">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <div class="btn-group dropend">
+                        <br/>
+                            <label for="selectorGenero" style="color: white;">Rol:</label>
+                            <select name="selectorGenero" id="selectorGenero" [(ngModel)]="rol" >
+                                <option class="form-select form-select-lg mb-"  [value]="valor" *ngFor="let valor of listaRoles" >{{valor}}</option>
+                            </select>
+                        </div>
+                       
+                    </div>
+                 
+                </div>
+                <div class="row" style="margin-bottom: 2%;"></div>
+                <div class="form-row row">
+                   
+            </div>
+            </form>
+            <ul class="section-btn text-center">
+                <a><span data-hover="Crear Cuenta" (click)="registrarse()">Crear Cuenta</span></a>
+            </ul>
+        </div>
+    </div>
+</section>

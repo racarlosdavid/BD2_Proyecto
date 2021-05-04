@@ -1,0 +1,48 @@
+<app-navigation-sesion></app-navigation-sesion>
+<section id="home">
+    <div class="overlay py-5">
+        <div class="container">
+            <div class="home-text">
+                <h1>Reporte No. 2</h1>
+            </div>
+            <div class="col-lg-7 col-md-10 col-11 mx-auto pb-5">
+                <form class="formulario">
+                    <div class="form-row row">
+                        <!--Nombre-->
+                        <div class="form-group col-md-6">
+                            <input [(ngModel)]='entidad_financiera' type="text" name="entidad_financiera" class="form-control" placeholder="Entidad Financiera">
+                        </div>
+                        <ul class="section-btn text-center">
+                            <a><span data-hover="Aceptar" (click)="aceptar()">Aceptar</span></a>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='container'>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr class="table-dark">
+                    <th class='text-dark' scope="col">Entidad Financiera</th>
+                    <th class='text-dark' scope="col">Total</th>
+                    <th class='text-dark' scope="col">Tipo Transaccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of data_debitos">
+                        <td>{{row.entidadfinanciera}}</td>
+                        <td>{{row.total_debitos}}</td>
+                        <td>{{'Debito'}}</td>
+                    </tr>
+                    <tr *ngFor="let row of data_creditos">
+                        <td>{{row.entidadfinanciera2}}</td>
+                        <td>{{row.total_creditos}}</td>
+                        <td>{{'Credito'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</section>
+
+

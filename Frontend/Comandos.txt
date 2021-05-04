@@ -1,0 +1,23 @@
+ng new Frontend
+ng g component /Components/nombre
+ng generate service /Services/nombreService/nombre
+ng generate module app-routing --flat --module=app
+
+ng generate service /Services/usuarioService/usuario
+
+
+ng g component /Components/navigation
+ng g component /Components/navigation-sesion
+ng g component /Components/registrarse
+
+
+ng g component /Components/reporte1
+ng g component /Components/reporte2
+ng g component /Components/reporte3
+ng g component /Components/reporte4
+ng g component /Components/reporte5
+ng g component /Components/dashboard
+
+ng g component /Components/transaccion
+
+

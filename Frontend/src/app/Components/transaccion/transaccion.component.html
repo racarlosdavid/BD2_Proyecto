@@ -1,0 +1,88 @@
+<app-navigation-sesion></app-navigation-sesion>
+<section id="home">
+    <div class="overlay py-5">
+        <div class="container">
+            <div class="home-text">
+                <h1>Cuenta a Debitar</h1>
+            </div>
+            <div class="col-lg-12 col-md-10 col-11 mx-auto pb-5">
+                <form class="formulario">
+                    <div class="form-row row">
+                        <!--Cui-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='cui' type="number" name="cui" class="form-control" placeholder="Cui">
+                        </div>
+                        <!--Nombre-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='nombre' type="text" name="nombre" class="form-control" placeholder="Nombre">
+                        </div>
+                        <!--Apellido-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='apellido' type="text" name="apellido" class="form-control" placeholder="Apellido">
+                        </div>
+                        <!--Mes-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='entidadFinanciera' type="text" name="entidadFinanciera" class="form-control" placeholder="Entidad Financiera">
+                        </div>
+                        <!--Año-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='tipoCuenta' type="text" name="tipoCuenta" class="form-control" placeholder="Tipo Cuenta">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="home-text">
+                <h1>Cuenta a Acreditar</h1>
+            </div>
+            <div class="col-lg-12 col-md-10 col-11 mx-auto pb-5">
+                <form class="formulario">
+                    <div class="form-row row">
+                        <!--Cui-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='cui2' type="number" name="cui2" class="form-control" placeholder="Cui">
+                        </div>
+                        <!--Nombre-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='nombre2' type="text" name="nombre2" class="form-control" placeholder="Nombre">
+                        </div>
+                        <!--Apellido-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='apellido2' type="text" name="apellido2" class="form-control" placeholder="Apellido">
+                        </div>
+                        <!--Mes-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='entidadFinanciera2' type="text" name="entidadFinanciera2" class="form-control" placeholder="Entidad Financiera">
+                        </div>
+                        <!--Año-->
+                        <div class="form-group col-md-2">
+                            <input [(ngModel)]='tipoCuenta2' type="text" name="tipoCuenta2" class="form-control" placeholder="Tipo Cuenta">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-lg-12 col-md-10 col-11 mx-auto pb-5">
+                <form class="formulario">
+                    <div class="form-row row">
+                        <!--Monto-->
+                        <div class="form-group col-md-6">
+                            <input [(ngModel)]='montoTransferencia' type="number" name="montoTransferencia" class="form-control" placeholder="Monto Transferencia">
+                        </div>
+    
+                        
+                        <ul class="section-btn text-center">
+                            <a><span data-hover="Realizar Transferencia" (click)="aceptar()">Realizar Transferencia</span></a>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div> 
+</section>
+
+

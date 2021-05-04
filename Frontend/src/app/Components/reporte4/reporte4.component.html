@@ -1,0 +1,29 @@
+<app-navigation-sesion></app-navigation-sesion>
+<section id="home">
+    <div class="overlay py-5">
+        <div class="container">
+            <div class="home-text">
+                <h1>Reporte No. 4</h1>
+            </div>
+        </div>
+        <div class='container'>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr class="table-dark">
+                    <th class='text-dark' scope="col">Entidad Financiera</th>
+                    <th class='text-dark' scope="col">Abreviacion</th>
+                   
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of data">
+                        <td>{{row.entidadfinanciera}}</td>
+                        <td>{{row.abreviacion}}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</section>
+
+

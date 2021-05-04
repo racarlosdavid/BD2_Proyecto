@@ -1,0 +1,22 @@
+<app-navigation></app-navigation>
+<section id="home" >
+    <img src="assets/Imagenes/fondoHome.jpg">
+    <div class="overlay py-5">
+        <h1 class="text-center py-5">Log In</h1>
+        <div class="col-lg-7 col-md-10 col-11 mx-auto pb-5">
+            <form class="formulario">
+                <div class="form-row row">
+                    <div class="form-group col-md-7">
+                        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="txtEmail" placeholder="Email" >
+                    </div>
+                    <div class="form-group col-md-5">
+                        <input [(ngModel)]="contrasenia" name="contrasenia" type="password" class="form-control"  id="txtcontrasenia" placeholder="Contraseña" >
+                    </div>
+                </div>
+            </form>
+            <ul class="section-btn text-right">
+                <a (click)='iniciarSesion()'><span data-hover="Log In">Log In</span></a>
+            </ul>
+        </div>
+    </div>
+</section>

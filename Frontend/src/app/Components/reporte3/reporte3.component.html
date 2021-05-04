@@ -1,0 +1,44 @@
+<app-navigation-sesion></app-navigation-sesion>
+<section id="home">
+    <div class="overlay py-5">
+        <div class="container">
+            <div class="home-text">
+                <h1>Reporte No. 3</h1>
+            </div>
+        </div>
+        <div class='container'>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr class="table-dark">
+                    <th class='text-dark' scope="col">Cui</th>
+                    <th class='text-dark' scope="col">Entidad Financiera</th>
+                    <th class='text-dark' scope="col">Nombre</th>
+                    <th class='text-dark' scope="col">Apellido</th>
+                    <th class='text-dark' scope="col">Email</th>
+                    <th class='text-dark' scope="col">Fecha Registro</th>
+                    <th class='text-dark' scope="col">Genero</th>
+                    <th class='text-dark' scope="col">Abreviacion</th>
+                    <th class='text-dark' scope="col">Tipo Cuenta</th>
+                    <th class='text-dark' scope="col">Saldo Inicial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of data">
+                        <td>{{row.cui}}</td>
+                        <td>{{row.entidadfinanciera}}</td>
+                        <td>{{row.nombre}}</td>
+                        <td>{{row.apellido}}</td>
+                        <td>{{row.email}}</td>
+                        <td>{{row.fecha_registro}}</td>
+                        <td>{{row.genero}}</td>
+                        <td>{{row.abreviacion}}</td>
+                        <td>{{row.tipocuenta}}</td>
+                        <td>{{row.saldo_inicial}}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</section>
+
+

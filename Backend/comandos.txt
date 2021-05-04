@@ -1,0 +1,42 @@
+- Comandos para crear el proyecto e instalar modulos
+npm init -y
+npm install express
+npm install cassandra-driver
+npm install cors morgan
+npm install nodemon -D
+
+- Comando para correr el servidor
+npm run dev
+
+- Para crear el contendeor de cassandra y correrlo en modo demonio
+docker run --name some-cassandra -p 9042:9042 -d cassandra  
+
+- Para entrar al bash de cassandra
+docker exec -it some-cassandra bash
+
+- Para entrar a la consola de cassandra
+cqlsh
+
+-Para pasar archivos al contenedor
+- 1ro. encontar el docker id con 
+sudo docker ps 
+
+- 2do. pasar el archivo al contenedor
+sudo docker cp /file/file.csv "id_del_contenedor":/file/file.csv
+sudo docker cp Data/archivo.txt a4448be07457:/home/archivo.txt
+sudo docker cp files a4448be07457:/home/files
+
+- 3ro. cargar los datos a la tabla
+COPY tableName (col1,col2,col3.....) FROM 'file/file.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+COPY cycling.cyclist_catgory FROM 'cyclist_category.csv' WITH DELIMITER='|' AND HEADER=TRUE
+
+COPY cuenta FROM '/home/files/PRIMER_CUENTAHABIENTES.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+
+Select count(*) from table;
+
+- para borrar el directorio con todo 
+rm -r nombre
+
+
+-Para crear un archivo csv con desde las tablas 
+COPY transacciones_por_mes ( nombre, apellido )  TO '/home/files/OPERACIONES2.csv' WITH DELIMITER=',';
